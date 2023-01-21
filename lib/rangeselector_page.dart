@@ -9,6 +9,9 @@ class RangeSelectorPage extends StatefulWidget {
 }
 
 class _RangeSelectorPageState extends State<RangeSelectorPage> {
+  int _min = 0;
+  int _max = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,15 +20,17 @@ class _RangeSelectorPageState extends State<RangeSelectorPage> {
             padding: const EdgeInsets.all(8),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
+              children: [
                 RangeselectorForm(
                   labeltext: "MIN",
+                  intSetterValue: (value) => _min = value,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 RangeselectorForm(
                   labeltext: "MAX",
+                  intSetterValue: (value) => _max = value,
                 ),
               ],
             ),

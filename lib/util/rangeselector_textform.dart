@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
+typedef IntValueSetter = void Function(int value);
+
 class RangeselectorForm extends StatelessWidget {
   const RangeselectorForm(
-      {super.key, required this.labeltext, required this.intSetterValue});
+      {super.key, required this.labeltext, required this.intValueSetter});
 
   final String? labeltext;
-  final void Function(int value) intSetterValue;
+  final IntValueSetter intValueSetter;
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +23,7 @@ class RangeselectorForm extends StatelessWidget {
           return null;
         }
       },
-      onSaved: (newValue) => intSetterValue(int.parse(newValue ?? '')),
+      onSaved: (newValue) => intValueSetter(int.parse(newValue ?? '')),
     );
   }
 }

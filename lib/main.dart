@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:random_number_generator/rangeselector_page.dart';
+import 'package:random_number_generator/page/rangeselector_page.dart';
 
 void main() {
   runApp(const MyApp());

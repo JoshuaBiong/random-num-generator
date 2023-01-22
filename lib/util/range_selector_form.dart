@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:random_number_generator/util/rangeselector_textform.dart';
+import 'package:random_number_generator/util/rangeselector_input_text_form.dart';
 
 class RangeSelectorForm extends StatelessWidget {
   const RangeSelectorForm(
@@ -10,8 +10,7 @@ class RangeSelectorForm extends StatelessWidget {
 
   final GlobalKey<FormState> formkey;
 
-  final IntValueSetter minValueSetter;
-  final IntValueSetter maxValueSetter;
+  final IntValueSetter minValueSetter, maxValueSetter;
 
   @override
   Widget build(BuildContext context) {
